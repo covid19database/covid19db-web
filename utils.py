@@ -16,7 +16,7 @@ def send_sms(phone_number: str, message: str, **kwargs):
     )
 
 
-def random_code(stringLength=6):
+def random_code(stringLength: int=6):
     """Generate a random string of letters and digits.
 
     Totally copy-pasta'ed https://pynative.com/python-generate-random-string/
