@@ -1,12 +1,21 @@
 <!doctype html>
 <!--Sources
   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
+
+  http://t1m0n.name/air-datepicker/docs/
+
+  https://felicegattuso.com/projects/timedropper/
 -->
 <html>
    <head>
-
-       <link rel="stylesheet" type="text/css" href="/static/webapp.css">
-       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
+       <script src="../jquery-3.4.1.js"></script>
+       <script src="../js/timedropper.js"></script>
+       <script src="../js/datepicker.min.js"></script>
+       <script src="../dist/js/i18n/datepicker.en.js"></script>
+       <link rel="stylesheet" type="text/css" href="../js/timedropper.css">
+       <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
+       <link rel="stylesheet" type="text/css" href="../static/webapp.css">
+       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">  
 
 
    </head>
@@ -19,18 +28,34 @@
 
     <div class="content">
       <div id="big-box">
-            <form method="post">
+            <div align="center" id = 'intro'>
+              Did you walk by 
+              a COVID patient?
+            </div>
+            <div align="center" id = 'intro-elab'>
+              COVID-19 patients can take up to 14
+              days to show symptoms. Check if you've
+              passed an at-risk space and time.
+            </div>
+            <form>
               <!--<label for="month">Month:</label><br>-->
-              <input type="text" placeholder="Month" id="month" name="fname"><br>
-              <!--<label for="month">Day:</label><br>-->
-              <input type="text" placeholder="Day" id="day" name="fname"><br>
-              <!--<label for="month">Year:</label><br>-->
-              <input type="text" placeholder="Year" id="year" name="fname"><br>
-              <label for="appt" id="time-enter">Enter your start and end time:</label>
-              <input type="time" placeholder="Start" id="start" name="time1" min="00:00" max="23:59"> <!-- removed 'required' just for testing -->
-              <input type="time" placeholder="End" id="end" name="time2" min="00:00" max="23:59"> <!-- removed 'required' just for testing -->
+              <input type="text" class="datepicker-here" id="month" name="fname"><br>
+            </form> 
+
+            <form>
+              <label for="appt" id="time-enter">Enter your date along with your start and end time:</label>
+              <input type="text" placeholder="Start" id="start" name="time1" min="00:00" max="23:59" required>
+              <script>$( "#start" ).timeDropper();</script>
+            </form>
+            <form>
+              <input type="text" placeholder="End" id="end" name="time2" min="00:00" max="23:59" required>
+              <script>$( "#end" ).timeDropper();</script>
+            </form>
+            <form>
               <input type="text" placeholder="Location" id="place" name="place" required>
-              <input type="submit" id="submit">
+            </form>
+            <form>
+              <input type="submit" id="submit" value= "CHECK FOR CONTACT"> 
             </form>
         </div>
 
@@ -52,7 +77,7 @@
 
 
 
-
+   
    </body>
 
 </html>

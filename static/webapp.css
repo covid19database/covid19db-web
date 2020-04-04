@@ -66,74 +66,38 @@ body {
 #big-box {
     left: 511px;
     position: relative;
-    height: 700px;
+    height: 1050px;
     width: 475px;
-    background-color: #B4DCF5;
+    /*background-color: #B4DCF5;*/
     top: 50px;
     border-radius: 15px;
+    background-image: linear-gradient(to bottom right, #05425b, #26a3d8);
 }
 
-#name-box {
-	top: 30px;
+#intro {
     position: absolute;
-    height: 50px;
-    width: 100px;
-    background-color: #E2BCC3;
-    left: 98px;
-    border-radius: 15px;
+    padding:20px;
+    white-space: pre-wrap;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    left: -83px;
+    color: white;
 }
 
-#phone-box {
+#intro-elab {
 	position: absolute;
-    height: 50px;
-    width: 100px;
-    background-color: #E2BCC3;
-    top: 30px;
-    left: 295px;
-    border-radius: 15px;
+    padding:20px;
+    white-space: pre-wrap;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    top: 160px;
+    left: 24px;
+    color: white;
 }
 
-#email-box {
-	position: absolute;
-    height: 60px;
-    width: 300px;
-    background-color: #E2BCC3;
-    top: 110px;
-    left: 98px;
-    border-radius: 15px;
-}
-
-#comment-box {
-	left: 98px;
-    top: 200px;
-    position: absolute;
-    height: 200px;
-    width: 300px;
-    background-color: #E2BCC3;
-    border-radius: 15px;
-}
 #text {
 	padding:5px;
 	font-family: 'Futura';
-}
-#send-text {
-	padding-left: 25px;
-	padding-top:5px;
-	font-family: 'Futura';
-}
-#send-box {
-	position: absolute;
-    height: 30px;
-    width: 90px;
-    background-color: #F8E3DF;
-    top: 440px;
-    left: 198px;
-    border-radius: 25px;
-
-}
-#send-box:hover {
-	background-color: #E2BCC3;
-	cursor: pointer;
 }
 
 #title {
@@ -146,8 +110,8 @@ body {
 
 #month {
 	position: absolute;
-	top: 70px;
-	left: 30px;
+	top: 400px;
+	left: 55px;
 	width: 100px;
 	border-radius: 5px;
 }
@@ -171,7 +135,7 @@ body {
 #time-enter {
 	position: absolute;
 	top: 370px;
-	left: 90px;
+	left: 55px;
 
 }
 
@@ -179,7 +143,7 @@ body {
 #start {
 	position: absolute;
 	top: 400px;
-	left: 90px;
+	left: 181px;
 	width: 100px;
 	border-radius: 5px;
 }
@@ -187,25 +151,31 @@ body {
 #end {
 	position: absolute;
 	top: 400px;
-	left: 290px;
+	left: 305px;
 	width: 100px;
 	border-radius: 5px;
 }
 
 #place {
 	position: absolute;
-	top: 500px;
-	left: 90px;
-	width: 300px;
+	top: 300px;
+	left: 55px;
+	width: 350px;
 	height: 50px;
 	border-radius: 5px;
 }
 
 #submit {
 	position: absolute;
-	top: 600px;
-	left: 90px;
-	width: 300px;
+	top: 450px;
+	left: 55px;
+	width: 350px;
 	height: 50px;
 	border-radius: 50px;
+		font-family: 'Nunito', sans-serif;
+}
+
+#submit:hover{
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.35);
 }
