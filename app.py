@@ -42,7 +42,7 @@ def code():
 
 @app.route('/submit/')
 def submit():
-    return 'form here'
+    return render_template('webapp.html')
 
 
 if __name__ == '__main__':
