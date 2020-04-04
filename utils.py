@@ -5,6 +5,7 @@ import string
 sns_client = boto3.client('sns')  # TODO: how to auth on server
 
 
+# TODO: use https://pypi.org/project/phonenumbers/ to validate number
 def send_sms(phone_number: str, message: str, **kwargs):
     """Send an SMS to the provided phone number"""
     if not phone_number.startswith('+'):
