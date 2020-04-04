@@ -1,0 +1,211 @@
+.Header-Bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #58362D;
+	height: 45px;
+	padding: 10px;
+}
+
+body {
+   margin: 0px;
+   background-color: "#F8E3DF";
+
+}
+
+#logo {
+	font-family: 'Nunito', sans-serif;
+	font-size: 20px;
+	white-space: pre-line;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	color: #F8E3DF;
+
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-item a {
+	padding: 25px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	color: #F8E3DF;
+}
+.nav-item a:hover {
+	cursor:pointer;
+}
+
+.footer-bar {
+	margin-top: 645px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #58362D;
+	height: 25px;
+	padding: 10px;
+}
+
+.foot-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.foot-item {
+	padding: 25px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 10px;
+	color: #F8E3DF;
+}
+
+#big-box {
+    left: 511px;
+    position: relative;
+    height: 700px;
+    width: 475px;
+    background-color: #B4DCF5;
+    top: 50px;
+    border-radius: 15px;
+}
+
+#name-box {
+	top: 30px;
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background-color: #E2BCC3;
+    left: 98px;
+    border-radius: 15px;
+}
+
+#phone-box {
+	position: absolute;
+    height: 50px;
+    width: 100px;
+    background-color: #E2BCC3;
+    top: 30px;
+    left: 295px;
+    border-radius: 15px;
+}
+
+#email-box {
+	position: absolute;
+    height: 60px;
+    width: 300px;
+    background-color: #E2BCC3;
+    top: 110px;
+    left: 98px;
+    border-radius: 15px;
+}
+
+#comment-box {
+	left: 98px;
+    top: 200px;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    background-color: #E2BCC3;
+    border-radius: 15px;
+}
+#text {
+	padding:5px;
+	font-family: 'Futura';
+}
+#send-text {
+	padding-left: 25px;
+	padding-top:5px;
+	font-family: 'Futura';
+}
+#send-box {
+	position: absolute;
+    height: 30px;
+    width: 90px;
+    background-color: #F8E3DF;
+    top: 440px;
+    left: 198px;
+    border-radius: 25px;
+
+}
+#send-box:hover {
+	background-color: #E2BCC3;
+	cursor: pointer;
+}
+
+#title {
+	font-size: 40px;
+    top: 25px;
+    left: 454px;
+    position: relative;
+    font-family: 'Futura';
+}
+
+#month {
+	position: absolute;
+	top: 70px;
+	left: 30px;
+	width: 100px;
+	border-radius: 5px;
+}
+
+#day {
+	position: absolute;
+	top: 70px;
+	left: 200px;
+	width: 70px;
+	border-radius: 5px;
+}
+
+#year {
+	position: absolute;
+	top: 70px;
+	left: 350px;
+	width: 90px;
+	border-radius: 5px;
+}
+
+#time-enter {
+	position: absolute;
+	top: 370px;
+	left: 90px;
+
+}
+
+
+#start {
+	position: absolute;
+	top: 400px;
+	left: 90px;
+	width: 100px;
+	border-radius: 5px;
+}
+
+#end {
+	position: absolute;
+	top: 400px;
+	left: 290px;
+	width: 100px;
+	border-radius: 5px;
+}
+
+#place {
+	position: absolute;
+	top: 500px;
+	left: 90px;
+	width: 300px;
+	height: 50px;
+	border-radius: 5px;
+}
+
+#submit {
+	position: absolute;
+	top: 600px;
+	left: 90px;
+	width: 300px;
+	height: 50px;
+	border-radius: 50px;
+}
