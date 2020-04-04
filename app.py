@@ -1,14 +1,18 @@
 from flask import Flask, request, redirect, url_for, render_template, jsonify
 from utils import send_sms, random_code
+import requests
+import os
+
 app = Flask(__name__)
 
-
+API_BASE_URL = os.environ['API_BASE_URL']
 code_to_phone_number = {}  # TODO: move this to db, def don't leave this here
 
 
 @app.route('/')
-def hello_world():
-    return render_template('index.html')
+def index():
+    traces = requests.get(os.path.join(API_BASE_URL, 'traces/'))
+    return render_template('index.html', traces=traces.json())
 
 
 @app.route('/login', methods=('GET', 'POST'))
@@ -40,10 +44,17 @@ def code():
     return render_template('code.html')
 
 
-@app.route('/submit/')
+@app.route('/submit/', methods=('POST', 'GET'))
 def submit():
+    if request.method == 'POST':
+        data = {
+            'id': -1,
+            'plus_codes': request.form['place']
+        }
+        response = requests.post(os.path.join(API_BASE_URL, 'traces/'), json=data)
+        return redirect(url_for('index'))
     return render_template('webapp.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
