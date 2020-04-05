@@ -67,7 +67,7 @@ body {
     left: 511px;
     position: relative;
     height: 1050px;
-    width: 475px;
+    width: 500px;
     /*background-color: #B4DCF5;*/
     top: 50px;
     border-radius: 15px;
@@ -178,4 +178,20 @@ body {
 #submit:hover{
 	cursor: pointer;
 	box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+#arrow {
+	position: absolute;
+    top: 100px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 60px;
+    width: 200px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+
 }

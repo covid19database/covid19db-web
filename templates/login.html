@@ -1,4 +1,67 @@
-<form action="/login" method="post">
-<input type="text" name="phone_number" placeholder="phone number" required>
-<input type="submit">
 </form>
+
+<!doctype html>
+<!--Sources
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
+
+  http://t1m0n.name/air-datepicker/docs/
+
+  https://felicegattuso.com/projects/timedropper/
+-->
+<html>
+   <head>
+       <script src="../jquery-3.4.1.js"></script>
+       <script src="../js/timedropper.js"></script>
+       <script src="../js/datepicker.min.js"></script>
+       <script src="../dist/js/i18n/datepicker.en.js"></script>
+       <link rel="stylesheet" type="text/css" href="../js/timedropper.css">
+       <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
+       <link rel="stylesheet" type="text/css" href="../static/login.css">
+       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">  
+       <meta name="viewport" content="width=device-width, initial-scale=0.85">
+
+
+   </head>
+
+   <body>
+    <header>
+
+    </header>
+
+
+    <div class="content">
+      <div id="big-box">
+            <div align="center" id = 'intro'>
+              Enter your 
+              phone number.
+            </div>
+            <div align="center" id = 'intro-elab'>
+              You won't have to create a password.
+              Your phone is your authenticator.
+            </div>
+            <form action="/login" method="post">
+            	<input type="text" id = "phone" name="phone_number" placeholder="Phone Number" required>
+            </form>
+            <form>
+              <input type="submit" id="submit" value= "CONTINUE"> 
+            </form>
+            <div id = "arrow"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="footer-bar">
+    </div>
+
+
+
+   
+   </body>
+
+</html>
