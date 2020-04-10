@@ -1,0 +1,92 @@
+<!doctype html>
+<!--Sources
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
+
+  http://t1m0n.name/air-datepicker/docs/
+
+  https://felicegattuso.com/projects/timedropper/
+-->
+<html>
+   <head>
+       <script src="../jquery-3.4.1.js"></script>
+       <script src="../js/timedropper.js"></script>
+       <script src="../js/datepicker.min.js"></script>
+       <script src="../dist/js/i18n/datepicker.en.js"></script>
+       <link rel="stylesheet" type="text/css" href="../js/timedropper.css">
+       <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
+       <link rel="stylesheet" type="text/css" href="../static/logs.css">
+       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">  
+       <meta name="viewport" content="width=device-width, initial-scale=0.85">
+
+
+   </head>
+
+   <body>
+    <header>
+
+    </header>
+
+
+    <div class="content">
+      <div id="big-box">
+            <div align="center" id = 'intro'>
+              You walked by <b>0</b> 
+              COVID patients.
+            </div>
+            <div id = "num-contacts">
+              0 CONTACTS
+            </div>
+            <form>
+              <input type="submit" id="timeplace1" name="fname"><br>
+            </form> 
+            <div align="left" id = 'details'>
+              <span class="line1"><b>April 3</b></span>
+              <span class="line2">Costco, Safeway, Thai Noodle</span>
+              <span class="line3">11 a.m. - 12:30 p.m. on April 3</span>
+            </div>
+            <form>
+              <input type="submit" id="timeplace2" name="fname"><br>
+            </form> 
+            <div align="left" id = 'details2'>
+              <span class="line1"><b>April 2</b></span>
+              <span class="line2">Costco, Safeway, Thai Noodle</span>
+              <span class="line3">11 a.m. - 12:30 p.m. on April 3</span>
+            </div>
+            <form>
+              <input type="submit" id="submit" value= "NEW CHECK"> 
+            </form>
+            <form>
+              <input type="submit" id="load" name="place" value= "LOAD MORE" required>
+              <label for="appt" align="left" id="no-manual">
+                <b>Don't like manual entry?</b> Download
+                our mobile apps for auto-logging. You
+                control what information (if any) is
+                uploaded.
+              </label>
+              <input type="submit" id="save-info" value= "I HAVE CORONAVIRUS"> 
+              <input type="submit" id="app-store" name="place" value= "VISIT APP STORE" required>
+            </form>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="footer-bar">
+    </div>
+
+
+
+   
+   </body>
+
+</html>
