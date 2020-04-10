@@ -1,6 +1,6 @@
 from flask import Flask, request, redirect, url_for, render_template, jsonify
 from flask_login import LoginManager, login_user, UserMixin, login_required, \
-    current_user
+    current_user, logout_user
 from utils import send_sms, random_code
 import requests
 import os
@@ -76,8 +76,15 @@ def submit():
             'plus_codes': request.form['place']
         }
         response = requests.post(os.path.join(API_BASE_URL, 'traces/'), json=data)
-        return redirect(url_for('index'))
+        return render_template('result.html')
     return render_template('webapp.html')
+
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
