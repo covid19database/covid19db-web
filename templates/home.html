@@ -1,0 +1,5 @@
+{% if current_user.is_authenticated %}
+Hello, {{ current_user.id }}!
+{% else %}
+no auth :(
+{% endif %}

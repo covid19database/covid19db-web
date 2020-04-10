@@ -10,7 +10,7 @@
        <link rel="stylesheet" type="text/css" href="../js/timedropper.css">
        <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
        <link rel="stylesheet" type="text/css" href="../static/code.css">
-       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">  
+       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
        <meta name="viewport" content="width=device-width, initial-scale=0.85">
 
 
@@ -30,13 +30,11 @@
             </div>
             <div align="center" id = 'intro-elab'>
               We sent a code to your phone:
-              +1 000 000 0000.
+              +1 {{ phone_number }}.
             </div>
             <form action="/code" method="post">
-            	<input type="text" id = "code" name="code" placeholder="5-digit code" required>
-            </form>
-            <form>
-              <input type="submit" id="submit" value= "CONTINUE"> 
+            	<input type="text" id = "code" name="code" placeholder="6-digit code" required>
+              <input type="submit" id="submit" value= "CONTINUE">
             </form>
             <div id = "arrow"></div>
         </div>
@@ -54,7 +52,7 @@
 
 
 
-   
+
    </body>
 
 </html>
