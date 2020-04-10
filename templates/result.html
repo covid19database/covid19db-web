@@ -44,24 +44,19 @@
             <form>
               <!--<label for="month">Month:</label><br>-->
               <input type="text" class="datepicker-here" id="month" name="fname"><br>
-            </form> 
 
-            <form>
               <label for="appt" id="time-enter">Check another space and time?</label>
               <input type="text" placeholder="Start" id="start" name="time1" min="00:00" max="23:59" required>
               <script>$( "#start" ).timeDropper();</script>
-            </form>
-            <form>
+
               <input type="text" placeholder="End" id="end" name="time2" min="00:00" max="23:59" required>
               <script>$( "#end" ).timeDropper();</script>
-            </form>
-            <form>
+
               <input type="text" placeholder="Location" id="place" name="place" required>
-            </form>
-            <form>
+
               <input type="submit" id="submit" value= "CHECK FOR CONTACT"> 
-            </form>
-            <form>
+
+              <input type="text" placeholder="Location" id="place" name="place" required>
               <label for="appt" align="center" id="save-time">
                 Don't want to type this information
                 again next time? Enable one-click risk
