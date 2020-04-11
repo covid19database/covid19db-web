@@ -2,13 +2,7 @@
   <head>
     {% include "includes/head.html" %}
   </head>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="{{ url_for('login') }}">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include "includes/header.html" %}
   {% set p='COVID-19 patients can take up to 14 days to show symptoms. Check if the last public location you passed is at-risk.' %}
   {% include "includes/check.html" %}
 

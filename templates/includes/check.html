@@ -15,26 +15,6 @@
       {% if p %}
       <p>{{ p }}</p>
       {% endif %}
-      <div class="form-container">
-        <form method="post" action="/submit/">
-          <div class="field-wide">
-            <input type="text" placeholder="Last public location">
-          </div>
-          <div class="field-side-by-side">
-            <div class="field-with-edit">
-              <input type="date" />
-            </div>
-            <div class="field-with-edit">
-              <input type="time" />
-            </div>
-          </div>
-          <div class="submit">
-            <input class="orange" type="submit" value="Check for contact">
-            <span class="circle">
-              <i class="fa fa-arrow-right"></i>
-            </span>
-          </div>
-        </form>
-      </div>
+      {% include "includes/form.html" %}
     </div>
   </section>

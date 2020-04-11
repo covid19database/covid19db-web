@@ -101,7 +101,7 @@ a {
 
 .color-slab,input[type="submit"].blue {
   background: rgb(41,171,226);
-  background: linear-gradient(90deg, rgba(41,171,226,1) 0%, rgba(0,53,74,1) 100%);
+  background: linear-gradient(270deg, rgba(41,171,226,1) 0%, rgba(0,53,74,1) 100%);
 }
 
 .color-slab.light {
@@ -162,6 +162,10 @@ a {
   font-weight:700;
 }
 
+/**
+ * FORM
+ **/
+
 .field-wide, .field-side-by-side {
   display:flex;
 }
@@ -218,7 +222,7 @@ input:not([type="submit"]) {
 
 input[type="submit"].orange {
   background: rgb(241,90,36);
-  background: linear-gradient(135deg, rgba(241,90,36,1) 0%, rgba(251,176,59,1) 100%);
+  background: linear-gradient(45deg, rgba(241,90,36,1) 0%, rgba(251,176,59,1) 100%);
 }
 
 .submit {
@@ -227,12 +231,12 @@ input[type="submit"].orange {
 
 .submit .circle {
   position:absolute;
-  top:0.35em;
+  top:0.45em;
   right:0.5em;
   height:3em;
   width:3em;
   border-radius:50%;
-  background-color:rgba(0,0,0,0.25);
+  background-color:rgba(0,0,0,0.15);
 }
 
 .circle i {
@@ -264,14 +268,26 @@ header li {
 header ul {
   display:flex;
   flex-direction:row;
-  padding-right:1em;
+  padding-right:2em;
 }
 
 header li a {
   display:inline-block;
-  padding:2em;
+  padding:2em 1em;
   color:#FFF;
   font-weight:600;
+}
+
+.light header li a {
+  color:#666;
+}
+
+header li a.active {
+  background: rgb(241,90,36);
+  background: linear-gradient(45deg, rgba(241,90,36,1) 0%, rgba(251,176,59,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(241,90,36,1) 0%, rgba(251,176,59,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /**

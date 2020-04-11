@@ -1,0 +1,21 @@
+    <div class="form-container">
+      <form method="post" action="{{ url_for('check') }}">
+        <div class="field-wide">
+          <input type="text" placeholder="Last public location" name="place">
+        </div>
+        <div class="field-side-by-side">
+          <div class="field-with-edit">
+            <input type="date" name="date" min="2020-01-01" max="2020-12-31"/>
+          </div>
+          <div class="field-with-edit">
+            <input type="time" name="time" step="900" />
+          </div>
+        </div>
+        <div class="submit">
+          <input class="orange" type="submit" value="Check for contact">
+          <span class="circle">
+            <i class="fa fa-arrow-right"></i>
+          </span>
+        </div>
+      </form>
+    </div>

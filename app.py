@@ -46,7 +46,7 @@ def home():
 
 @app.route('/login', methods=('GET', 'POST'))
 def login():
-    if current_user.is_authenticated:
+    if current_user.is_authenticated and request.args.get('force') != "true":
         return redirect(url_for('home'))
     if request.method == 'POST':
         code = random_code()
@@ -80,7 +80,7 @@ def code():
 
 
 @app.route('/check/', methods=('POST', 'GET'))
-def submit():
+def check():
     if request.method == 'POST':
         data = {
             'id': -1,

@@ -1,7 +1,18 @@
-{% if current_user.is_authenticated %}
-Hello, {{ current_user.id }}!
-{% else %}
-no auth :(
-{% endif %}
+<html class="light">
+  <head>
+    {% include "includes/head.html" %}
+  </head>
 
-{{ traces }}
+  {% include "includes/header.html" %}
+
+  {% if current_user.is_authenticated %}
+  Hello, {{ current_user.id }}!
+  {% else %}
+  no auth :(
+  {% endif %}
+
+  {{ traces }}
+  <footer>
+    <p><a href="#">Terms of Service</a><a href="#">Privacy Policy</a></p>
+  </footer>
+</html>
