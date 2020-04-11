@@ -1,0 +1,40 @@
+  <div class="background">
+    <div class="color-slab">
+      <div class="overlaid-circle"></div>
+    </div>
+    <div class="color-slab light">
+      <div class="overlaid-circle skinny"></div>
+    </div>
+    <div class="color-slab light">
+      <div class="overlaid-circle offset"></div>
+    </div>
+  </div>
+  <section class="banner wrap-container">
+    <div class="wrap">
+      <h1>{{ h1 | safe or 'Did you walk by a COVID-19 patient?' }}</h1>
+      {% if p %}
+      <p>{{ p }}</p>
+      {% endif %}
+      <div class="form-container">
+        <form method="post" action="/submit/">
+          <div class="field-wide">
+            <input type="text" placeholder="Last public location">
+          </div>
+          <div class="field-side-by-side">
+            <div class="field-with-edit">
+              <input type="date" />
+            </div>
+            <div class="field-with-edit">
+              <input type="time" />
+            </div>
+          </div>
+          <div class="submit">
+            <input class="orange" type="submit" value="Check for contact">
+            <span class="circle">
+              <i class="fa fa-arrow-right"></i>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>

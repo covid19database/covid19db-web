@@ -1,24 +1,6 @@
-<!doctype html>
-<!--Sources
-  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
-
-  http://t1m0n.name/air-datepicker/docs/
-
-  https://felicegattuso.com/projects/timedropper/
--->
 <html>
    <head>
-       <script src="../jquery-3.4.1.js"></script>
-       <script src="../js/timedropper.js"></script>
-       <script src="../js/datepicker.min.js"></script>
-       <script src="../dist/js/i18n/datepicker.en.js"></script>
-       <link rel="stylesheet" type="text/css" href="../js/timedropper.css">
-       <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
-       <link rel="stylesheet" type="text/css" href="../static/result.css">
-       <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">  
-       <meta name="viewport" content="width=device-width, initial-scale=0.85">
-
-
+     {% include "includes/head.html" %}
    </head>
 
    <body>
@@ -29,7 +11,7 @@
 
       <div id="big-box">
             <label for="appt" align="center" id="intro">
-              You walked by <b>0</b> 
+              You walked by <b>0</b>
               COVID patients.
             </label>
             <div id = "num-contacts">
@@ -53,7 +35,7 @@
 
               <input type="text" placeholder="Location" id="place" name="place" required>
 
-              <input type="submit" id="submit" value= "CHECK FOR CONTACT"> 
+              <input type="submit" id="submit" value= "CHECK FOR CONTACT">
 
               <input type="text" placeholder="Location" id="place" name="place" required>
               <label for="appt" align="center" id="save-time">
@@ -61,7 +43,7 @@
                 again next time? Enable one-click risk
                 checks by saving your information.
               </label>
-              <input type="submit" id="save-info" value= "SAVE YOUR INFORMATION"> 
+              <input type="submit" id="save-info" value= "SAVE YOUR INFORMATION">
             </form>
         </div>
     </div>
@@ -76,7 +58,7 @@
 
 
 
-   
+
    </body>
 
 </html>

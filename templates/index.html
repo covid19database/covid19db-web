@@ -1,5 +1,36 @@
-<a href="{{ url_for('login') }}">login</a>
+<!-- {{ traces }} -->
 
-<a href="{{ url_for('submit') }}">submit</a>
 
-{{ traces }}
+<html>
+  <head>
+    {% include "includes/head.html" %}
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('login') }}">login</a></li>
+        <li><a href="{{ url_for('submit') }}">submit</a></li>
+      </ul>
+    </nav>
+  </header>
+  {% set p='COVID-19 patients can take up to 14 days to show symptoms. Check if the last public location you passed is at-risk.' %}
+  {% include "includes/check.html" %}
+
+  <!-- <div class="content">
+  <div id="big-box">
+        <input type="text" class="datepicker-here" id="month" name="fname"><br>
+        <label for="appt" id="time-enter">Enter your date along with your start and end time:</label>
+        <input type="text" placeholder="Start" id="start" name="time1" min="00:00" max="23:59" required>
+        <script>$( "#start" ).timeDropper();</script>
+        <input type="text" placeholder="End" id="end" name="time2" min="00:00" max="23:59" required>
+        <script>$( "#end" ).timeDropper();</script>
+        <input type="text" placeholder="Location" id="place" name="place" required>
+        <input type="submit" id="submit" value= "CHECK FOR CONTACT">
+      </form>
+  </div>
+  </div>
+  </div> -->
+  <footer>
+    <p><a href="#">Terms of Service</a><a href="#">Privacy Policy</a></p>
+  </footer>
+</html>

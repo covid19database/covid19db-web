@@ -1,4 +1,5 @@
-from flask import Flask, request, redirect, url_for, render_template, jsonify
+from flask import Flask, request, redirect, url_for, jsonify, \
+    render_template as flask_render_template
 from flask_login import LoginManager, login_user, UserMixin, login_required, \
     current_user, logout_user
 from utils import send_sms, random_code
@@ -13,6 +14,11 @@ login_manager.init_app(app)
 
 API_BASE_URL = os.environ['API_BASE_URL']
 code_to_phone_number = {}  # TODO: move this to db, def don't leave this here
+
+
+def render_template(*args, **kwargs):
+    kwargs['random_code'] = random_code()
+    return flask_render_template(*args, **kwargs)
 
 
 class User(UserMixin):
@@ -68,7 +74,7 @@ def code():
     return render_template('code.html', phone_number=request.args.get('phone_number'))
 
 
-@app.route('/submit/', methods=('POST', 'GET'))
+@app.route('/check/', methods=('POST', 'GET'))
 def submit():
     if request.method == 'POST':
         data = {
@@ -77,7 +83,7 @@ def submit():
         }
         response = requests.post(os.path.join(API_BASE_URL, 'traces/'), json=data)
         return render_template('result.html')
-    return render_template('webapp.html')
+    return redirect(url_for('index'))
 
 
 @app.route("/logout")
