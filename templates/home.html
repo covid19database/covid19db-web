@@ -2,53 +2,16 @@
   <head>
     {% include "includes/head.html" %}
   </head>
-
-  {% include "includes/header.html" %}
-
-  {% if current_user.is_authenticated %}
-  Hello, {{ current_user.id }}!
-  {% else %}
-  no auth :(
-  {% endif %}
-
-  {{ traces }}
-  <section class="cards wrap-container">
-    <div class="wrap wide">
-      <div class="card">
-        <div class="card-heading">0 contacts</div>
-        <div class="card-content">
-          <h3>Costco</h3>
-          <p class="card-byline">123 Main Street, City of Wallabees</p>
-          <p class="card-copy">11:30 a.m. on April 3</p>
-        </div>
+  <body>
+    {% include "includes/header.html" %}
+    <section class="banner wrap-container">
+      <div class="wrap">
+        <h1>You walked by <b>0</b> COVID patients.</h1>
+        <p>You authenticated with the phone number <b>{{ current_user.id }}</b>.</p>
       </div>
-      <div class="card">
-        <div class="card-heading">0 contacts</div>
-        <div class="card-content">
-          <h3>Costco</h3>
-          <p class="card-byline">123 Main Street, City of Wallabees</p>
-          <p class="card-copy">11:30 a.m. on April 3</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-heading">0 contacts</div>
-        <div class="card-content">
-          <h3>Costco</h3>
-          <p class="card-byline">123 Main Street, City of Wallabees</p>
-          <p class="card-copy">11:30 a.m. on April 3</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-heading">0 contacts</div>
-        <div class="card-content">
-          <h3>Costco</h3>
-          <p class="card-byline">123 Main Street, City of Wallabees</p>
-          <p class="card-copy">11:30 a.m. on April 3</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <p><a href="#">Terms of Service</a><a href="#">Privacy Policy</a></p>
-  </footer>
+    </section>
+    {% include "includes/cards.html" %}
+    {% include "includes/actions.html" %}
+    {% include "includes/footer.html" %}
+  </body>
 </html>

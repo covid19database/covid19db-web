@@ -1,0 +1,28 @@
+<section class="form-standalone wrap-container">
+  <div class="wrap">
+    <div class="form-container">
+      <div class="form-wrap">
+        <p>Check another space and time?</p>
+        {% include "includes/form.html" %}
+        <div class="divider"></div>
+        {% if not current_user.is_authenticated %}
+        <p>Don't want to type this information again? Create an account to save your information.</p>
+        <div class="button-container">
+          <a href="{{ url_for('login') }}" class="button blue">Enable 1-click Checks</a>
+          <span class="circle">
+            <i class="fa fa-arrow-right"></i>
+          </span>
+        </div>
+        {% else %}
+        <p>Don't want to type <i>any</i> information again? Download our app to collect this information automatically.</p>
+        <div class="button-container">
+          <a href="#" class="button blue">Visit App Store</a>
+          <span class="circle">
+            <i class="fa fa-arrow-right"></i>
+          </span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

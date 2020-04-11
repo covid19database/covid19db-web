@@ -5,22 +5,22 @@
     </head>
     <section class="auth wrap-container">
       <div class="wrap form-container">
-        <form method="post" action="{{ action }}">
-          <h2>{{ h2 or "Enter your phone number." }}</h2>
-          <p>{{ p or "You won't have to create a password. Your phone is your authenticator." }}</p>
-          <input type="tel" placeholder="{{ placeholder or 'Phone Number' }}" name="{{ name }}" />
-          <div class="submit">
-            <input type="submit" class="blue" value="Continue">
-            <span class="circle">
-              <i class="fa fa-long-arrow-right"></i>
-            </span>
-          </div>
-        </form>
+        <div class="form-wrap">
+          <form method="post" action="{{ action }}">
+            <h2>{{ h2 or "Enter your phone number." }}</h2>
+            <p>{{ p | safe or "You won't have to create a password. Your phone is your authenticator." }}</p>
+            <input type="tel" placeholder="{{ placeholder or 'Phone Number' }}" name="{{ name }}" />
+            <div class="submit">
+              <input type="submit" class="blue" value="Continue">
+              <span class="circle">
+                <i class="fa fa-long-arrow-right"></i>
+              </span>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <!-- <div class="filler"></div> -->
-    <footer>
-      <p><a href="#">Terms of Service</a><a href="#">Privacy Policy</a></p>
-    </footer>
+    {% include "includes/footer.html" %}
   </body>
 </html>

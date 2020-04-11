@@ -73,7 +73,7 @@ def code():
         return redirect(url_for('home'))
     return render_template('auth.html',
         h2='Type in your security code.',
-        p=f"We sent a code to your phone: {request.args.get('phone_number')}",
+        p=f"We sent a code to your phone: <b>{request.args.get('phone_number')}</b>",
         action=url_for('code'),
         name='code',
         placeholder='Code')

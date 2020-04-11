@@ -34,7 +34,7 @@ body {
   max-width:80em;
 }
 
-input[type="submit"] {
+input[type="submit"],.button {
   cursor:pointer;
   outline:none;
   border:none;
@@ -103,7 +103,7 @@ a {
   left:0;
 }
 
-.color-slab,input[type="submit"].blue {
+.color-slab,input[type="submit"].blue,.button.blue {
   background: rgb(41,171,226);
   background: linear-gradient(270deg, rgba(41,171,226,1) 0%, rgba(0,53,74,1) 100%);
 }
@@ -154,7 +154,7 @@ a {
   line-height:150%;
 }
 
-.form-container form {
+.form-container .form-wrap {
   width:50%;
   min-width:22em;
   display:flex;
@@ -164,6 +164,16 @@ a {
 .banner h1 {
   font-size:2.75em;
   font-weight:700;
+}
+
+
+
+/**
+ * LIGHT BANNER
+ **/
+
+.light .banner h1,.light .banner p {
+  color:#333;
 }
 
 /**
@@ -191,9 +201,13 @@ input[type="date"] {
   max-width:13.5em;
 }
 
-.field-side-by-side input,.field-side-by-side div,.field-wide input {
+form input,.field-side-by-side div {
   display:flex;
   flex:1;
+}
+
+form > input {
+  width:100%;
 }
 
 .form-container {
@@ -218,22 +232,22 @@ input:not([type="submit"]) {
   border:none;
 }
 
-.submit, input[type="submit"] {
+.submit, input[type="submit"],.button-container,.button {
   display:flex;
   flex:1;
   position:relative;
 }
 
-input[type="submit"].orange {
+input[type="submit"].orange,.button.orange {
   background: rgb(241,90,36);
   background: linear-gradient(45deg, rgba(241,90,36,1) 0%, rgba(251,176,59,1) 100%);
 }
 
-.submit {
+.submit,.button-container {
   font-size:0.8em;
 }
 
-.submit .circle {
+.submit .circle,.button-container .circle {
   position:absolute;
   top:0.45em;
   right:0.5em;
@@ -326,6 +340,11 @@ footer a + a {
  * CARDS
  **/
 
+.cards {
+  z-index:20;
+  margin-top:-3em;
+}
+
 .cards .wrap {
   display:flex;
   flex-wrap: wrap;
@@ -334,7 +353,7 @@ footer a + a {
 
 .card {
   margin:1em;
-  flex: 1 1 15em;
+  flex: 1 1 20em;
   background-color:#FFF;
   border-radius:1em;
   box-shadow:0 0.25em 1em rgba(0,0,0,0.15);
@@ -368,4 +387,36 @@ footer a + a {
 }
 
 .card-copy {
+}
+
+/**
+ * FORM STANDALONE
+ **/
+
+.divider {
+  width:100%;
+  height:0.2em;
+  background-color:#e0e0e0;
+  margin:2em 0 1.5em 0;
+}
+
+.form-standalone {
+  z-index:10;
+  background-color:#eee;
+  margin-top:-5em;
+  padding:8em 0 3em 0;
+}
+
+.form-standalone p {
+  color:#666;
+  text-align:center;
+  line-height:150%;
+}
+
+.form-standalone .form-container form input {
+  background-color:#FFF;
+}
+
+.form-standalone .button {
+  margin-bottom:1em
 }
