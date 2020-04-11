@@ -34,14 +34,14 @@ def load_user(user_id):
 
 @app.route('/')
 def index():
-    traces = requests.get(os.path.join(API_BASE_URL, 'traces/'))
-    return render_template('index.html', traces=traces.json())
+    return render_template('index.html')
 
 
 @app.route('/home')
 @login_required
 def home():
-    return render_template('home.html')
+    traces = requests.get(os.path.join(API_BASE_URL, 'traces/'))
+    return render_template('home.html', traces=traces.json())
 
 
 @app.route('/login', methods=('GET', 'POST'))
@@ -56,7 +56,7 @@ def login():
             message=f'Here is your super duper secret code: {code}')
         code_to_phone_number[code] = phone_number
         return redirect(url_for('code', phone_number=phone_number))
-    return render_template('login.html')
+    return render_template('auth.html', action=url_for('login'), name='phone_number')
 
 
 @app.route('/code', methods=('POST', 'GET'))
@@ -71,7 +71,12 @@ def code():
         phone_number = code_to_phone_number.pop(code)
         login_user(User(phone_number))
         return redirect(url_for('home'))
-    return render_template('code.html', phone_number=request.args.get('phone_number'))
+    return render_template('auth.html',
+        h2='Type in your security code.',
+        p=f"We sent a code to your phone: {request.args.get('phone_number')}",
+        action=url_for('code'),
+        name='code',
+        placeholder='Code')
 
 
 @app.route('/check/', methods=('POST', 'GET'))

@@ -6,6 +6,10 @@ html {
   background-color:#001b25;
 }
 
+html.light {
+  background-color:#FFF;
+}
+
 html, body {
   padding:0;
   margin:0;
@@ -26,15 +30,51 @@ input[type="submit"] {
   cursor:pointer;
   outline:none;
   border:none;
-  border-radius:0.25em;
   color:#FFF;
   font-weight:600;
   text-transform:uppercase;
   padding:1.5em 2.5em;
+  border-radius:2em;
 }
 
 a {
   text-decoration:none;
+}
+
+/**
+ * AUTH
+ **/
+
+.light body {
+  display:flex;
+  flex-direction: column;
+}
+
+.auth {
+  margin:3em 0;
+}
+
+.light input:not([type="submit"]) {
+  color:#333;
+  background-color:#eee;
+}
+
+.auth h2 {
+  font-weight:500;
+  font-size:2em;
+  line-height:135%;
+  text-align:center;
+  margin-bottom:0;
+}
+
+.auth p {
+  text-align:center;
+  color:#666;
+  line-height:150%;
+}
+
+.filler {
+  flex:1;
 }
 
 /**
@@ -54,7 +94,7 @@ a {
   left:0;
 }
 
-.color-slab {
+.color-slab,input[type="submit"].blue {
   background: rgb(41,171,226);
   background: linear-gradient(90deg, rgba(41,171,226,1) 0%, rgba(0,53,74,1) 100%);
 }
@@ -105,7 +145,7 @@ a {
   line-height:150%;
 }
 
-.banner form {
+.form-container form {
   width:50%;
   min-width:22em;
   display:flex;
@@ -143,7 +183,7 @@ input[type="date"] {
   flex:1;
 }
 
-.banner .form-container {
+.form-container {
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -160,7 +200,7 @@ form > * {
 input:not([type="submit"]) {
   color:#333;
   padding:1em 1.5em;
-  border-radius:0.25em;
+  border-radius:0.5em;
   background-color:#FFF;
   border:none;
 }
@@ -172,9 +212,12 @@ input:not([type="submit"]) {
 }
 
 input[type="submit"].orange {
-  border-radius:2em;
   background: rgb(241,90,36);
   background: linear-gradient(135deg, rgba(241,90,36,1) 0%, rgba(251,176,59,1) 100%);
+}
+
+.submit {
+  font-size:0.8em;
 }
 
 .submit .circle {
@@ -206,12 +249,18 @@ footer {
   justify-content: flex-end;
   padding:3em 5em;
   font-weight:600;
+  color:#FFF;
 }
 
 footer p, footer p a {
-  color:#FFF;
+  color:inherit;
 }
 
 footer a + a {
   margin-left:3em;
+}
+
+.light footer {
+  background-color:#ccc;
+  color:#666;
 }
