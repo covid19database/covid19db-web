@@ -59,6 +59,10 @@ a {
   flex-direction: column;
 }
 
+.auth p a {
+  color:#999;
+}
+
 .auth {
   margin:3em 0 5em 0;
 }

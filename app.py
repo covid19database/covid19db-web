@@ -5,6 +5,7 @@ from flask_login import LoginManager, login_user, UserMixin, login_required, \
 from utils import send_sms, random_code
 import requests
 import os
+import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
@@ -18,6 +19,8 @@ code_to_phone_number = {}  # TODO: move this to db, def don't leave this here
 
 def render_template(*args, **kwargs):
     kwargs['random_code'] = random_code()
+    kwargs['today'] = datetime.datetime.today().strftime('%Y-%m-%d')
+    kwargs['now'] = datetime.datetime.now().strftime('%H:%M')
     return flask_render_template(*args, **kwargs)
 
 

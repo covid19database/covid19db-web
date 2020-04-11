@@ -16,6 +16,7 @@
                 <i class="fa fa-long-arrow-right"></i>
               </span>
             </div>
+            <p><a href="{% if url_for('code') not in request.referrer %}{{ request.referrer }}{% else %}{{ url_for('index') }}{% endif %}">Back</a></p>
           </form>
         </div>
       </div>

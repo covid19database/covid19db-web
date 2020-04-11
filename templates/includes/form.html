@@ -1,14 +1,14 @@
 
       <form method="post" action="{{ url_for('check') }}">
         <div class="field-wide">
-          <input type="text" placeholder="Last public location" name="place">
+          <input type="text" placeholder="Last public location" name="place" required>
         </div>
         <div class="field-side-by-side">
           <div class="field-with-edit">
-            <input type="date" name="date" min="2020-01-01" max="2020-12-31"/>
+            <input type="date" name="date" min="2020-01-01" max="2020-12-31" value="{{ today }}" required/>
           </div>
           <div class="field-with-edit">
-            <input type="time" name="time" step="900" />
+            <input type="time" name="time" step="900" value="{{ now }}" required />
           </div>
         </div>
         <div class="submit">
