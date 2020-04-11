@@ -30,6 +30,10 @@ body {
   max-width:45em;
 }
 
+.wrap.wide {
+  max-width:80em;
+}
+
 input[type="submit"] {
   cursor:pointer;
   outline:none;
@@ -316,4 +320,52 @@ footer a + a {
   background-color:#eee;
   color:#666;
   padding:1em 5em;
+}
+
+/**
+ * CARDS
+ **/
+
+.cards .wrap {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.card {
+  margin:1em;
+  flex: 1 1 15em;
+  background-color:#FFF;
+  border-radius:1em;
+  box-shadow:0 0.25em 1em rgba(0,0,0,0.15);
+}
+
+.card-heading {
+  padding:1.5em;
+  background-color:#eee;
+  border-radius:1em 1em 0 0;
+  text-align:center;
+  font-weight:600;
+  text-transform:uppercase;
+  font-size:0.75em;
+}
+
+.card-content {
+  padding:1.5em 2em 1em 2em;
+}
+
+.card-content h3 {
+  font-size:1.5em;
+  margin:0;
+}
+
+.card p {
+  margin:0.5em 0;
+}
+
+.card-byline {
+  color:#999;
+}
+
+.card-copy {
 }
