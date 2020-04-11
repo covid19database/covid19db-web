@@ -15,6 +15,10 @@ html, body {
   margin:0;
 }
 
+body {
+  justify-content: space-between;
+}
+
 .wrap-container {
   display:flex;
   flex-direction: row;
@@ -35,6 +39,7 @@ input[type="submit"] {
   text-transform:uppercase;
   padding:1.5em 2.5em;
   border-radius:2em;
+  box-shadow:0 0.25em 0.5em rgba(0, 0, 0, 0.25);
 }
 
 a {
@@ -51,7 +56,7 @@ a {
 }
 
 .auth {
-  margin:3em 0;
+  margin:3em 0 5em 0;
 }
 
 .light input:not([type="submit"]) {
@@ -238,12 +243,43 @@ input[type="submit"].orange {
 }
 
 /**
+ * HEADER
+ **/
+
+header {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+header li, header ul {
+  padding:0;
+  margin:0;
+}
+
+header li {
+  list-style:none;
+}
+
+header ul {
+  display:flex;
+  flex-direction:row;
+  padding-right:1em;
+}
+
+header li a {
+  display:inline-block;
+  padding:2em;
+  color:#FFF;
+  font-weight:600;
+}
+
+/**
  * FOOTER
  **/
 
 footer {
   display:flex;
-  flex:1;
   background-color:#001b25;
   flex-direction: row;
   justify-content: flex-end;
@@ -261,6 +297,7 @@ footer a + a {
 }
 
 .light footer {
-  background-color:#ccc;
+  background-color:#eee;
   color:#666;
+  padding:1em 5em;
 }
